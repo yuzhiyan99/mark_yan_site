@@ -36,15 +36,11 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
           TZ: Asia/Hong_Kong
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify --baseURL "https://galore12138.github.io/mark_yan_site/"
 
       - name: Build Pagefind search index
         run: npx pagefind --site public
