@@ -6,7 +6,7 @@
     </div>
     <div class="hero-copy">
       <p class="eyebrow">{{ site.Params.role }}</p>
-      <h1 id="hero-name">Mark (Yuzhi) Yan</h1>
+      <h1 id="hero-name">{{ .Title }} </h1>
       <p class="affiliation">{{ site.Params.department }}<br>{{ site.Params.school }}, {{ site.Params.university }}</p>
       <div class="hero-actions">
         <a class="button button-primary" href="{{ site.Params.cv | relURL }}">Download CV</a>
@@ -18,7 +18,7 @@
   <section id="bio" class="section">
     <div class="section-heading">
       <p class="eyebrow">Bio & C.V.</p>
-      <h2>About</h2>
+      <h2>About Me</h2>
     </div>
     <div class="prose">{{ .Content }}</div>
     <div id="research-areas" class="keyword-list" aria-label="Research areas">
